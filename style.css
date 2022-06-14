@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+:root {
+  --primary-green: #31c3bd;
+  --secondary-green: #65e9e4;
+  --primary-orange: #f2b137;
+  --secondary-orange: #ffc860;
+  --background-dark: #1a2a33;
+  --background-light: #1f3641;
+  --primary-gray: #a8bfc9;
+  --secondary-gray: #dbe8ed;
+}
+
+img {
+  display: inline-block;
+}
+
+button {
+  border: 0;
+}
+
+.jc-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.fw-500 {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.fw-900 {
+  font-weight: 900;
+  font-size: 1.2rem;
+  letter-spacing: 0.7px;
+}
+
+.gray {
+  color: var(--primary-gray);
+}
+
+.dark-gray {
+  color: grey;
+}
+
+.primary-orange {
+  color: var(--primary-orange);
+}
+
+.primary-green {
+  color: var(--primary-green);
+}
+
+.selection {
+  display: flex;
+  align-items: center;
+  background-color: var(--background-dark);
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.selected-piece {
+  background-color: var(--primary-gray);
+  padding: 0.5rem;
+  border-radius: 12px;
+}
+
+.selection-1,
+.selection-2 {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  width: 50%;
+}
+
+.players-mark {
+  padding: 1em 3em;
+  background-color: var(--background-light);
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.btn {
+  width: 100%;
+  padding: 1.2em 0;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+
+.btn-close {
+  padding: 1.2rem 2.8rem;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  height: 100vh;
+  background-color: var(--background-dark);
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.col {
+  cursor: pointer;
+}
+
+.endgame-message {
+  position: absolute;
+  left: 10%;
+  transform: translateX(-50%);
+  width: 20%;
+  background-color: var(--background-light);
+  padding: 2rem 0;
+}
+
+.box {
+  width: 460px;
+}
+
+.grid-3-col {
+  display: grid;
+  grid-template-columns: repeat(3, 140px);
+  grid-gap: 1rem;
+}
+
+.square {
+  grid-template-rows: repeat(3, 140px);
+}
+
+.heading-col,
+.footer-col {
+  grid-template-rows: 52px;
+}
+
+.heading-col:nth-child(2),
+.footer-col,
+.col {
+  background-color: var(--background-light);
+  border-radius: 12px;
+}
+
+.heading-col,
+.footer-col,
+.col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading-col {
+  margin-bottom: 1rem;
+}
+
+.footer-col {
+  margin-top: 1rem;
+  flex-direction: column;
+  grid-gap: 0;
+}
+
+.footer-col p:nth-child(1) {
+  margin-bottom: 0;
+}
+
+.footer-col p:nth-child(2) {
+  margin-top: 0;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.mark {
+  width: 50%;
+}
+
+.turn-symbol {
+  height: 35%;
+  filter: grayscale(100%);
+  margin-right: 0.5rem;
+}
+
+.restart-container {
+  background-color: var(--primary-gray);
+  padding: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.bg-orange {
+  background-color: var(--primary-orange);
+}
+
+.bg-green {
+  background-color: var(--primary-green);
+}
+
+.bg-gray {
+  background-color: var(--primary-gray);
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+.btn-close:nth-child(1) {
+  margin-right: 1rem;
+}
+
+.winning-heading {
+  margin-left: 1rem;
+}
+
+#winning-image {
+  width: 3rem;
+  height: 100%;
+}
+
+.endgame-message {
+  display: none;
+}
+
+#the-game-board,
+#draw-msg,
+#wld,
+#restart-game,
+#winning-msg,
+#losing-msg,
+#takes-the-round {
+  display: none;
+}
+
+#itscpumove {
+  font-size: 1.8rem;
+}
+
+@media (max-width: 600px) {
+  .grid-3-col {
+    grid-template-columns: repeat(3, 95px);
+    grid-gap: 0.5rem;
+  }
+
+  .square {
+    grid-template-rows: repeat(3, 95px);
+  }
+}

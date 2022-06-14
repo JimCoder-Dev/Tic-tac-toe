@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Frontend Mentor | Tic Tac Toe</title>
+  </head>
+  <body>
+    <div id="start-screen" class="container">
+      <div class="box">
+        <div class="jc-center">
+          <img class="logo" src="./assets/logo.svg" alt="" />
+        </div>
+
+        <div class="players-mark">
+          <p class="center fw-500 gray">PICK PLAYER 1's MARK</p>
+          <div class="selection">
+            <div class="selection-1 selected-piece">
+              <img
+                class="selection-image"
+                src="./assets/icon-x-outline.svg"
+                alt=""
+              />
+            </div>
+
+            <div class="selection-2">
+              <img
+                class="selection-image"
+                src="./assets/icon-o-outline.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <p class="center dark-gray">
+            REMEBER: <span id="goes-first">X</span> GOES FIRST
+          </p>
+        </div>
+        <div class="buttons">
+          <button id="btn-vs-cpu" class="btn bg-orange">
+            NEW GAME (VS CPU)
+          </button>
+          <button id="btn-vs-player" class="btn bg-green">
+            NEW GAME (VS PLAYER)
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="the-game-board" class="container">
+      <p class="gray fw-500" id="itscpumove"></p>
+      <div class="grid-3-col top">
+        <div class="heading-col flex-start">
+          <img src="./assets/logo.svg" alt="" />
+        </div>
+        <div class="heading-col row">
+          <img class="turn-symbol" alt="" />
+          <p class="fw-500 gray">TURN</p>
+        </div>
+        <div class="heading-col flex-end">
+          <div class="restart-container">
+            <img class="restart-btn" src="./assets/icon-restart.svg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-3-col square">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+      <div class="grid-3-col">
+        <div class="footer-col bg-green">
+          <p>
+            X
+            <span id="x-player"></span>
+          </p>
+          <p id="score-1" class="fw-900"></p>
+        </div>
+        <div class="footer-col bg-gray">
+          <p>TIES</p>
+          <p id="ties" class="fw-900"></p>
+        </div>
+        <div class="footer-col bg-orange">
+          <p>O <span id="o-player"></span></p>
+          <p id="score-2" class="fw-900"></p>
+        </div>
+      </div>
+      <div class="endgame-message">
+        <div id="wld">
+          <p id="winning-msg" class="gray center">YOU WON!</p>
+          <p id="losing-msg" class="gray center">OH NO, YOU LOST...</p>
+          <h2 id="draw-msg" class="gray center">TIED</h2>
+          <div id="takes-the-round" class="jc-center">
+            <img id="winning-image" />
+            <h2 class="winning-heading" id="winning-color">TAKES THE ROUND</h2>
+          </div>
+          <div class="jc-center">
+            <button id="quit-btn" class="btn-close bg-gray">QUIT</button>
+            <button id="next-round-btn" class="btn-close bg-orange">
+              NEXT ROUND
+            </button>
+          </div>
+        </div>
+
+        <div id="restart-game" class="center">
+          <div class="restart">
+            <h2 class="gray">RESTART GAME?</h2>
+            <button id="cancel-restart-btn" class="btn-close bg-gray">
+              NO, CANCEL
+            </button>
+            <button id="restart-game-btn" class="btn-close bg-orange">
+              YES, RESTART
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- New game menu start -->
+    <script src="./script.js"></script>
+  </body>
+</html>
