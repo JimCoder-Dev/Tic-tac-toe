@@ -136,9 +136,8 @@ body {
 
 .endgame-message {
   position: absolute;
-  left: 10%;
-  transform: translateX(-50%);
-  width: 20%;
+  left: 0;
+  width: 100%;
   background-color: var(--background-light);
   padding: 2rem 0;
 }

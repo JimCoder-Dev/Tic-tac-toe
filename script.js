@@ -137,6 +137,7 @@ function drawMessage() {
 }
 
 function displayWinningMessage() {
+  //IF COMPUTER HAS WON ..... DISPLAY YOU LOSE
   endGameMsg.style.display = 'block';
   winLoseDraw.style.display = 'block';
   winningMsg.style.display = 'block';
